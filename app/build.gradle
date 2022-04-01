@@ -2,13 +2,14 @@ plugins {
     id 'com.android.application'
 }
 
+
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.androidstudy"
         minSdk 21
-        targetSdk 32
+        targetSdk 27
         versionCode 1
         versionName "1.0"
 
@@ -25,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '31.0.0'
+
+
 }
 
 dependencies {
@@ -35,4 +39,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //郭霖的数据库管理
+    implementation 'org.litepal.guolindev:core:3.2.3'
+    debugImplementation 'com.guolindev.glance:glance:1.1.0'
 }

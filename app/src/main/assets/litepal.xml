@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名称-->
+    <dbname value="data" />
+
+    <!--数据库版本号，代码如果升级数据库等这里需要+1-->
+    <version value="1" />
+
+    <!--用于设定所有的映射模型，即你定义数据库表的类名路径-->
+    <!-- 表名      对应  类名 -->
+    <!-- 表中的列名 对应 类的字段 -->
+    <list>
+        <mapping class="com.example.androidstudy.db.School" />
+        <mapping class="com.example.androidstudy.db.Student" />
+    </list>
+
+</litepal>
