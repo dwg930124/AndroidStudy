@@ -197,6 +197,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CameraActivity.class));
             }
         });
+
+        findViewById(R.id.broadcast).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BroadcastActivity.class));
+            }
+        });
     }
 
     @Override
