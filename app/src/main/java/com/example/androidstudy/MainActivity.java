@@ -40,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.e(TAG, "onNewIntent: ");
+    }
+
     /**
      * 初始化控件
      */
@@ -149,12 +155,46 @@ public class MainActivity extends AppCompatActivity {
                 aSwitch.setChecked(checked);
                 Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
             }
+
         });
 
         findViewById(R.id.database).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, DataBaseActivity.class));
+            }
+        });
+
+        findViewById(R.id.skip1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.skip2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("com.example.androidstudy.ACTION_START");
+                intent.setPackage("com.example.androidstudy");
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.again).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+            }
+        });
+
+        findViewById(R.id.camera).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CameraActivity.class));
             }
         });
     }
