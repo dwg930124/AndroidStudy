@@ -204,6 +204,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, BroadcastActivity.class));
             }
         });
+
+        findViewById(R.id.service).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ServiceActivity.class));
+            }
+        });
     }
 
     @Override

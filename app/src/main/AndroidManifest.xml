@@ -13,12 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTheme">
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".ServiceActivity"
+            android:exported="false" />
+
         <receiver
             android:name=".broadcast.MyReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.androidstudy.BROADCAST_TEST"/>
+                <action android:name="com.example.androidstudy.BROADCAST_TEST" />
             </intent-filter>
         </receiver>
 

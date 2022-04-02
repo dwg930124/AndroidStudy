@@ -113,6 +113,13 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="broadcast" />
+
+        <Button
+            android:id="@+id/service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Service" />
     </LinearLayout>
 
 </ScrollView>
